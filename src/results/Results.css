@@ -1,0 +1,8 @@
+input,
+button{
+    font-size: inherit;
+}
+
+#results-div {
+    width: 40%;
+}

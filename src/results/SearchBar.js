@@ -1,15 +1,21 @@
-import React from "react";
+import React from "react"
+import './Results.css'
 
-function SearchBar({item, onSearchSong}) {
+function SearchBar({item, onSearchSong, onAddSong}) {
     const handleSearchSong = event => {
         const song = event.target.value;
         onSearchSong(song)
     }
 
+    const handleSongAdding = () => {
+        onAddSong(item)
+        onSearchSong('')
+    }
+
     return (
         <div>
             <input type={"text"} value={item} onChange={handleSearchSong}/>
-            <button>ADD</button>
+            <button onClick={handleSongAdding}>ADD</button>
         </div>
     )
 }

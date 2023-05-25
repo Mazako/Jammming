@@ -1,21 +1,19 @@
-import React, {useState} from "react";
-import Song from "../song/Song";
-import ResultsList from "./ResultsList";
-import SearchBar from "./SearchBar";
+import React, {useState} from "react"
+import ResultsList from "./ResultsList"
+import SearchBar from "./SearchBar"
+import './Results.css'
 
-function Results(props) {
-    const SONGS = [<Song name='Fałszywe Dziwki' artist='Firma'/>]
-
+function Results({songs, onAddSong}) {
     const [item, setItem] = useState("")
     const onSearchingSong = (name) => {
         setItem(name)
     }
 
     return (
-        <div>
-            <h3>Results</h3>
-            <SearchBar item={item} onSearchSong={onSearchingSong} />
-            <ResultsList songs={SONGS}/>
+        <div id={'results-div'}>
+            <h2>Results</h2>
+            <SearchBar item={item} onSearchSong={onSearchingSong} onAddSong={onAddSong} />
+            <ResultsList songs={songs}/>
         </div>
     )
 }
