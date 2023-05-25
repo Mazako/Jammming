@@ -8,11 +8,11 @@
 }
 
 .logo {
-    font-size: 3rem;
     color: bisque;
 }
 
 .logo > span {
     color: cornflowerblue;
+    font-size: inherit;
 }
 
