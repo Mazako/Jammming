@@ -18,18 +18,31 @@ class SongDTO {
 
 }
 
-
-let ID = 1;
+const optionsToGetSongs = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '273e9f091dmshbb23fda83ae9ae2p1973fdjsncd1814035bcb',
+        'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+    }
+};
 
 function App() {
     const [songs, setSongs] = useState([])
     const [savedSongs, setSavedSongs] = useState([])
 
-    const onAddSong = (name) => {
-        setSongs([
-            ...songs,
-            new SongDTO(ID++, name, 'firma')
-        ])
+    const onAddSong = async (name) => {
+        const url = `https://spotify23.p.rapidapi.com/search/?q=${name}&type=tracks&offset=0&limit=${15}&numberOfTopResults=5`;
+        try {
+            const request = await fetch(url, optionsToGetSongs)
+            if (request.ok) {
+                const results = await request.json()
+                setSongs(
+                    results['tracks']['items'].map(song => new SongDTO(song['data']['id'], song['data']['name'], song['data']['artists']['items'][0]['profile']['name']))
+                )
+            }
+        } catch (e) {
+            alert(e)
+        }
     }
 
     const onSaveSong = (id, name, artist) => {
