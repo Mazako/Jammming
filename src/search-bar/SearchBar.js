@@ -1,5 +1,5 @@
 import React from "react"
-import './Results.css'
+import '../results/Results.css'
 
 function SearchBar({item, onSearchSong, onAddSong}) {
     const handleSearchSong = event => {
@@ -25,7 +25,7 @@ function SearchBar({item, onSearchSong, onAddSong}) {
     return (
         <div>
             <input type={"text"} value={item} onChange={handleSearchSong} onKeyDown={handleClickingEnter}/>
-            <button onClick={handleSongAdding}>ADD</button>
+            <button onClick={handleSongAdding}>Search</button>
         </div>
     )
 }
