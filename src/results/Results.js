@@ -1,6 +1,5 @@
-import React, {useState} from "react"
+import React from "react"
 import ResultsList from "./ResultsList"
-import SearchBar from "../search-bar/SearchBar"
 import './Results.css'
 
 function Results({songs, onSaveSong}) {

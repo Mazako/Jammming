@@ -1,8 +1,8 @@
 input,
-button{
+button {
     font-size: inherit;
 }
 
 #results-div {
-    width: 40%;
+    width: 50%;
 }

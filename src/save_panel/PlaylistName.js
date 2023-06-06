@@ -1,4 +1,5 @@
 import React from "react";
+import './SavePanel.css'
 
 function PlaylistName({onSetPlaylistName, playlistName}) {
     const handleChangePlaylistName = (e) => {
@@ -9,8 +10,8 @@ function PlaylistName({onSetPlaylistName, playlistName}) {
     }
     return (
         <div className={'playlist-name-input'}>
-            <p>Playlist name: </p>
-            <input type='text' onChange={handleChangePlaylistName} value={playlistName}/>
+            <input type='text' onChange={handleChangePlaylistName} value={playlistName}
+                   placeholder={'Nazwa playlisty'}/>
         </div>
     )
 }

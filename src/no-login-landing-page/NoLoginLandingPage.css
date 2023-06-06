@@ -1,0 +1,24 @@
+#no-login {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    width: 100%;
+    height: 100vh;
+}
+
+#no-login > p {
+    color: blanchedalmond;
+    margin: 0 20% 0 20%;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#no-login > button {
+    font-size: inherit;
+    width: 40%;
+    border-radius: 40px;
+}
+

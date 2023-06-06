@@ -1,0 +1,22 @@
+.playlist-name-input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.playlist-name-input > input {
+    display: block;
+}
+
+#savePanel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#savePanel-button {
+    display: block;
+    width: 20%;
+    align-self: center;
+}

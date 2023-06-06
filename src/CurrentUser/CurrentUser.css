@@ -1,0 +1,13 @@
+#current-user {
+    display: flex;
+}
+
+#current-user a {
+    color: white;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+
+}
+
